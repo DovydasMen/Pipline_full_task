@@ -1,0 +1,37 @@
+nba_validator_scheme = {
+    "validator": {
+        "$jsonSchema": {
+            "bsonType": "object",
+            "required": [
+                "name",
+                "surname",
+                "age",
+                "points",
+                "rebounds",
+                "steals",
+                "blocks",
+                "fouls commited",
+                "fouls achieved",
+                "+/-",
+                "health status",
+                "nationality",
+                "current team",
+            ],
+            "properties": {
+                "name": {"bsonType": "string"},
+                "surname": {"bsonType": "string"},
+                "age": {"bsonType": "int", "minimum": 18, "maximum": 25},
+                "points": {"bsonType": "double"},
+                "rebounds": {"bsonType": "double"},
+                "steals": {"bsonType": "double"},
+                "blocks": {"bsonType": "double"},
+                "fouls commited": {"bsonType": "double", "maximum": 6},
+                "fouls achieved": {"bsonType": "double", "maximum": 6},
+                "+/-": {"bsonType": "double"},
+                "health status": {"bsonType": "bool"},
+                "nationality": {"bsonType": "string"},
+                "current team": {"bsonType": "string"},
+            },
+        },
+    },
+}
